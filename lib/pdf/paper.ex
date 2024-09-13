@@ -32,7 +32,8 @@ defmodule Pdf.Paper do
     legal: [612, 1008],
     letter: [612, 792],
     tabloid: [792, 1224],
-    dk11202: [62, 100]
+    dk11202: [62, 100],
+    dk11221: [23, 23]
   ]
   |> Enum.each(fn {size, dimensions} ->
     def size(unquote(size)), do: [0, 0 | unquote(dimensions)]
